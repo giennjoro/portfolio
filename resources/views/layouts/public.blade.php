@@ -44,13 +44,14 @@
         </div>
     </nav>
 
-    <main class="py-4">
+    <main class="py-4" id="portfolio-content"> {{-- Added ID for PDF generation --}}
         @yield('content')
     </main>
 
     <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script> {{-- html2pdf.js CDN --}}
     <script>
         // Back to top button functionality
         let mybutton = document.getElementById("back-to-top");
@@ -91,6 +92,15 @@
             document.querySelectorAll('.fade-in-up, .scale-in, .rotate-in').forEach(element => {
                 observer.observe(element);
             });
+
+            // PDF Download functionality
+            const downloadCvBtn = document.getElementById('download-cv-btn');
+            if (downloadCvBtn) {
+                downloadCvBtn.addEventListener('click', function() {
+                    const element = document.getElementById('portfolio-content');
+                    html2pdf().from(element).save('my-portfolio-cv.pdf');
+                });
+            }
         });
     </script>
 

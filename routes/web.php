@@ -23,6 +23,7 @@ Route::get('/projects/{project}', [PortfolioController::class, 'showProject'])->
 Route::get('/skills', [PortfolioController::class, 'showSkills'])->name('portfolio.skills');
 Route::get('/contact', [PortfolioController::class, 'showContact'])->name('portfolio.contact');
 Route::post('/contact', [PortfolioController::class, 'storeContact'])->name('portfolio.contact.store');
+Route::get('/download-cv', [App\Http\Controllers\CvController::class, 'downloadCv'])->name('portfolio.download_cv');
 
 
 // Admin Routes

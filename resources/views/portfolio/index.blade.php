@@ -16,8 +16,9 @@
                         <a href="{{ $xUrl }}" target="_blank" class="text-decoration-none me-3"><i class="fab fa-twitter fa-2x text-light"></i></a>
                     @endif
                     @if ($contactEmail)
-                        <a href="mailto:{{ $contactEmail }}" class="text-decoration-none"><i class="fas fa-envelope fa-2x text-light"></i></a>
+                        <a href="mailto:{{ $contactEmail }}" class="text-decoration-none me-3"><i class="fas fa-envelope fa-2x text-light"></i></a>
                     @endif
+                    <a href="{{ route('portfolio.download_cv') }}" class="btn btn-primary mt-3">Download CV</a>
                 </div>
             </div>
         </div>
