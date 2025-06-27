@@ -1,0 +1,426 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto Mono', monospace; /* Applied Roboto Mono */
+    background-color: #1a1a1a; /* Deep charcoal background */
+    color: #f8f9fa; /* Off-white text for readability */
+    font-size: 1rem; /* Base font size */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #212529 !important; /* Darker charcoal for navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,.2); /* More prominent shadow */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #FFD700 !important; /* Gold for brand */
+    font-size: clamp(1.2rem, 2vw, 1.8rem); /* Fluid font size for brand */
+}
+
+.nav-link {
+    color: #f8f9fa !important; /* Off-white for links */
+    transition: color 0.3s ease;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Fluid font size for nav links */
+}
+
+.nav-link:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 215, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; /* Gold hamburger icon */
+}
+
+/* Main Content Area */
+main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    background-color: #212529; /* Darker charcoal for containers */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2); /* More prominent shadow */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace; /* Applied Roboto Mono */
+    color: #FFD700; /* Gold for headings */
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Fluid font size for h1 */
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Fluid font size for h2 */
+    margin-top: 2rem; /* Add space above category headings */
+    margin-bottom: 1rem; /* Reduce space below category headings */
+    border-bottom: 2px solid #FFD700; /* Gold underline for categories */
+    padding-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #1a1a1a; /* Dark text on gold button */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+    color: #1a1a1a;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    border-color: #545b62;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Cards (for projects) */
+.card {
+    border: 1px solid #FFD700; /* Gold border for cards */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #212529; /* Darker charcoal for card background */
+    color: #f8f9fa; /* Off-white text */
+    max-width: 300px; /* Reduced card width */
+    margin: 0 auto; /* Center cards in their columns */
+    display: flex; /* Use flexbox for card content */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    height: 180px; /* Reduced image height */
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1; /* Allow card body to grow and fill space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+    height: 200px; /* Fixed height for card body */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.card-title {
+    color: #FFD700; /* Gold for card titles */
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem); /* Fluid font size for card titles */
+}
+
+.card-text {
+    color: #adb5bd; /* Light gray for card text */
+    flex-grow: 1; /* Allow text to grow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-box-orient: vertical;
+    font-size: clamp(0.85rem, 1.5vw, 1rem); /* Fluid font size for card text */
+}
+
+/* Forms */
+.form-control {
+    border-radius: 0.25rem;
+    background-color: #343a40; /* Dark background for form inputs */
+    color: #f8f9fa; /* Light text for form inputs */
+    border: 1px solid #495057;
+}
+
+.form-control:focus {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #FFD700;
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #FFD700; /* Gold for form labels */
+}
+
+/* Alerts */
+.alert {
+    border-radius: 0.25rem;
+}
+
+/* Tables */
+.table {
+    color: #f8f9fa; /* Light text for table */
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+.table tbody tr {
+    background-color: #212529;
+}
+
+.table tbody tr:hover {
+    background-color: #343a40;
+}
+
+/* Specific for Skills Page */
+.list-group {
+    padding-left: 0; /* Remove default list padding */
+}
+
+.list-group-item {
+    border: none;
+    background-color: transparent;
+    color: #f8f9fa;
+    padding: 0; /* Remove default list item padding */
+    margin-bottom: 0.5rem; /* Space between skill badges */
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-badge {
+    background-color: #FFD700; /* Gold background */
+    color: #1a1a1a; /* Dark text */
+    border: 1px solid #e6c200; /* Slightly darker gold border */
+    padding: .6em 1em; /* Increased padding */
+    border-radius: .35rem; /* Slightly more rounded corners */
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem); /* Fluid font size for badges */
+    font-weight: 700;
+    margin: .25rem; /* Consistent margin around badges */
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #FFD700; /* Gold for footer text */
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px solid #343a40;
+}
+
+/* Intro Panel Styling */
+.intro-panel {
+    background-color: #212529;
+    padding: 3rem;
+    border-radius: 0.75rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.intro-panel-text {
+    flex: 1;
+}
+
+.intro-panel h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Fluid font size for h1 */
+    color: #FFD700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.intro-panel p {
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Fluid font size for intro text */
+    line-height: 1.8;
+    color: #f8f9fa;
+    margin-bottom: 1.5rem;
+}
+
+.intro-panel .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 5px solid #FFD700; /* Gold border */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Typing effect for name */
+.typing-text {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #FFD700; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FFD700; }
+}
+
+/* Social Icons */
+.social-icons .fab, .social-icons .fas {
+    color: #FFD700; /* Gold color for icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons .fab:hover, .social-icons .fas:hover {
+    color: #e6c200; /* Slightly darker gold on hover */
+}
+
+/* Back to Top Button */
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place at the bottom */
+    right: 30px; /* Place at the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #FFD700; /* Gold background */
+    color: #1a1a1a; /* Dark text */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #e6c200; /* Slightly darker gold on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Complex Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.rotate-in {
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.rotate-in.aos-animate {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-panel .profile-pic {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .intro-panel p {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-panel {
+        padding: 2rem;
+    }
+    .intro-panel h1 {
+        font-size: 1.8rem;
+    }
+    .intro-panel p {
+        font-size: 0.9rem;
+    }
+    .intro-panel .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
