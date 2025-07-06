@@ -6,17 +6,30 @@
             <img src="{{ asset('avatar.jpeg') }}" alt="Your Profile Picture" class="profile-pic scale-in">
             <div class="intro-panel-text">
                 <h1>Hello, I'm <span id="typing-name" class="typing-text"></span><span class="cursor">|</span></h1>
-                <p>I am a passionate full-stack web developer with a knack for building elegant and efficient web applications. Welcome to my portfolio, where I showcase my journey through code and creativity. Explore my projects to see how I bring ideas to life!</p>
+                <p>I’m a seasoned Full-Stack Web Engineer with over 7 years of professional experience specializing in
+                    Laravel (PHP), JavaScript, and modern DevOps practices. I architect, develop, and deploy scalable web
+                    applications with a strong focus on performance, security, and maintainability. My core expertise lies
+                    in backend engineering, RESTful API development, database design, and full lifecycle DevOps workflows —
+                    from CI/CD pipelines to cloud infrastructure management.</p>
+                <p>Over the years, I’ve built and maintained a wide range of platforms, including multi-tenant SaaS systems,
+                    custom CMS solutions, API-first applications, eCommerce platforms, travel portals, education tools, and
+                    SMS gateways. I’m deeply familiar with Laravel’s ecosystem </p>
+                <p>Above all, I bring a product-minded approach to software development — I don’t just build features, I
+                    solve real-world problems using code!</p>
+
 
                 <div class="social-icons mt-4 rotate-in">
                     @if ($githubUrl)
-                        <a href="{{ $githubUrl }}" target="_blank" class="text-decoration-none me-3"><i class="fab fa-github fa-2x text-light"></i></a>
+                        <a href="{{ $githubUrl }}" target="_blank" class="text-decoration-none me-3"><i
+                                class="fab fa-github fa-2x text-light"></i></a>
                     @endif
                     @if ($xUrl)
-                        <a href="{{ $xUrl }}" target="_blank" class="text-decoration-none me-3"><i class="fab fa-twitter fa-2x text-light"></i></a>
+                        <a href="{{ $xUrl }}" target="_blank" class="text-decoration-none me-3"><i
+                                class="fab fa-twitter fa-2x text-light"></i></a>
                     @endif
                     @if ($contactEmail)
-                        <a href="mailto:{{ $contactEmail }}" class="text-decoration-none me-3"><i class="fas fa-envelope fa-2x text-light"></i></a>
+                        <a href="mailto:{{ $contactEmail }}" class="text-decoration-none me-3"><i
+                                class="fas fa-envelope fa-2x text-light"></i></a>
                     @endif
                     <a href="{{ route('portfolio.download_cv') }}" class="btn btn-primary mt-3">Download CV</a>
                 </div>
@@ -28,7 +41,8 @@
             @foreach ($projects as $project)
                 <div class="col-md-4 mb-4 fade-in-up">
                     <div class="card">
-                        <img src="{{ Str::startsWith($project->image, 'http') ? $project->image : asset('storage/' . $project->image) }}" class="card-img-top" alt="{{ $project->title }}">
+                        <img src="{{ Str::startsWith($project->image, 'http') ? $project->image : asset('storage/' . $project->image) }}"
+                            class="card-img-top" alt="{{ $project->title }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $project->title }}</h5>
                             <p class="card-text">{{ Str::limit($project->description, 100) }}</p>

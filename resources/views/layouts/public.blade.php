@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="I’m a seasoned Full-Stack Web Engineer with over 7 years of professional experience specializing in Laravel (PHP), JavaScript, and modern DevOps practices. I architect, develop, and deploy scalable web applications with a strong focus on performance, security, and maintainability. My core expertise lies in backend engineering, RESTful API development, database design, and full lifecycle DevOps workflows — from CI/CD pipelines to cloud infrastructure management.">
+    <meta name="keywords" content="George N Mwaura, george njoroge portfolio, Laravel developer, web developer, gienNjoro, software engineer">
+    {{-- <meta name="robots" content="index, follow"> --}}
+    <meta name="author" content="George N Mwaura">
+    <title>{{ config('app.name', 'George N Mwaura') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap">
@@ -106,7 +110,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; {{ date('Y') }} Your Name. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} {{$portfolioName}}. All rights reserved.</p>
         </div>
     </footer>
 </body>
