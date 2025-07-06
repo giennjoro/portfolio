@@ -396,7 +396,7 @@ footer {
         font-size: 1rem;
     }
     .intro-panel h1 {
-        font-size: 2.2rem;
+        font-size: 2rem; /* Further reduced font size */
     }
     h2 {
         font-size: 1.8rem;
@@ -414,16 +414,16 @@ footer {
 
 @media (max-width: 576px) {
     .intro-panel {
-        padding: 2rem;
+        padding: 1.5rem; /* Reduced padding */
     }
     .intro-panel h1 {
-        font-size: 1.6rem; /* Reduced font size */
+        font-size: 1.4rem; /* Further reduced font size */
     }
     .intro-panel p {
-        font-size: 0.85rem; /* Reduced font size */
+        font-size: 0.8rem; /* Further reduced font size */
     }
     .intro-panel .profile-pic {
-        width: 150px;
-        height: 150px;
+        width: 120px; /* Reduced image size */
+        height: 120px; /* Reduced image size */
     }
 }
